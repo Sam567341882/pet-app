@@ -1,186 +1,205 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>動物醫院病歷表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美觀表單</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-            background-image: url('https://www.transparenttextures.com/patterns/white-paper.png');
-        }
-        h1, h2 {
-            text-align: center;
-            color: #555;
-            font-family: 'Comic Sans MS', cursive;
-        }
-        .form-container {
-            max-width: 1000px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border: 2px solid #f0a6ca;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        td, th {
-            border: 1px solid #f0a6ca;
-            padding: 10px;
-            text-align: left;
-            background-color: #fff0f6;
-        }
-        .label {
-            width: 25%;
-            background: #D6EAF8; /* 稍微深一點的藍色 */
-            font-weight: bold;
-            font-family: 'Comic Sans MS', cursive;
-        }
-        .input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #4A90E2;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .radio-group, .checkbox-group {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* 整體背景色 */
             display: flex;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .radio-group input, .checkbox-group input {
-            margin-right: 5px;
+        .container {
+            background-color: #f4e8c1; /* 表單背景色改為米色 */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
         }
-        .cute-icons {
-            width: 24px;
-            height: 24px;
-            margin-right: 5px;
+        .field {
+            display: flex;
+            flex-direction: column;
         }
-        .full-width {
-            width: calc(100% - 20px);
+        .field label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
         }
-        .blue-background {
-            background-color: #E6F7FF; /* 淺藍色 */
+        .field input, .field textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        .blue-border {
-            border-color: #4A90E2; /* 稍微深一點的藍色 */
+        .field textarea {
+            resize: vertical;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label, .radio-group label {
+            font-weight: normal;
+            color: #555;
+        }
+        .checkbox-group input, .radio-group input {
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>動物醫院病歷表</h1>
-    <div class="form-container">
-        <table>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">編號:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="編號"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">病例日期:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="病例日期"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">寵主姓名:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="寵主姓名"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">電話號碼:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="電話號碼"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">住址:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="住址"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">E-Mail:</td>
-                <td colspan="3"><input type="email" class="input full-width blue-border" name="E-Mail"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">寵物:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="寵物"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">品種:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="品種"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">毛色:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="毛色"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">晶片號碼:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="晶片號碼"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">性別:</td>
-                <td colspan="3" class="radio-group pink-border pink-background">
-                    <input type="radio" name="性別" value="公"> 公
-                    <input type="radio" name="性別" value="母"> 母
-                </td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">出生日期:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="出生日期"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">身高:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="身高"></td>
-            </tr>
-            <tr class="blue-border blue-background">
-                <td class="label blue-border">體重:</td>
-                <td colspan="3"><input type="text" class="input full-width blue-border" name="體重"></td>
-            </tr>
-            <tr>
-                <td class="label blue-border">其他注意事項:</td>
-                <td colspan="3"><input type="text" class="input full-width" name="其他注意事項"></td>
-            </tr>
-            <tr>
-                <td class="label blue-border">藥物:</td>
-                <td colspan="3" class="checkbox-group">
-                    <img src="https://www.iconfinder.com/icons/285657/download/png/32" alt="syrup" class="cute-icons">
-                    <input type="checkbox" name="藥物" value="syrup"> syrup
-                    <img src="https://www.iconfinder.com/icons/285659/download/png/32" alt="tablet" class="cute-icons">
-                    <input type="checkbox" name="藥物" value="tablet"> tablet
-                    <img src="https://www.iconfinder.com/icons/285661/download/png/32" alt="powder" class="cute-icons">
-                    <input type="checkbox" name="藥物" value="powder"> powder
-                </td>
-            </tr>
-            <tr>
-                <td class="label blue-border">個性:</td>
-                <td colspan="3" class="checkbox-group">
-                    <img src="https://www.iconfinder.com/icons/285657/download/png/32" alt="gentle" class="cute-icons">
-                    <input type="checkbox" name="個性" value="gentle"> gentle
-                    <img src="https://www.iconfinder.com/icons/285659/download/png/32" alt="nervous" class="cute-icons">
-                    <input type="checkbox" name="個性" value="nervous"> nervous
-                    <img src="https://www.iconfinder.com/icons/285661/download/png/32" alt="danger" class="cute-icons">
-                    <input type="checkbox" name="個性" value="danger"> danger
-                </td>
-            </tr>
-            <tr>
-                <td class="label blue-border">過敏:</td>
-                <td colspan="3"><input type="text" class="input full-width" name="過敏"></td>
-            </tr>
-        </table>
-        <h2>檢查項目</h2>
-        <table>
-            <tr>
-                <td class="label blue-border">項目:</td>
-                <td><input type="text" class="input full-width" name="項目"></td>
-            </tr>
-            <tr>
-                <td class="label blue-border">日期:</td>
-                <td><input type="text" class="input full-width" name="日期"></td>
-            </tr>
-            <tr>
-                <td class="label blue-border">結果:</td>
-                <td><input type="text" class="input full-width" name="結果"></td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="field">
+            <label for="number">編號:</label>
+            <input type="text" id="number">
+        </div>
+        <div class="field">
+            <label for="date">紀錄日期:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="field">
+            <label for="owner">寵主姓名:</label>
+            <input type="text" id="owner">
+        </div>
+        <div class="field">
+            <label for="pet_name">動物醫院病歷號:</label>
+            <input type="text" id="pet_name">
+        </div>
+        <div class="field">
+            <label for="id">身份證號:</label>
+            <input type="text" id="id">
+        </div>
+        <div class="field">
+            <label for="phone">電話號碼:</label>
+            <input type="tel" id="phone">
+        </div>
+        <div class="field">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email">
+        </div>
+        <div class="field">
+            <label for="address">住址:</label>
+            <input type="text" id="address">
+        </div>
+        <div class="field">
+            <label for="breed">品種:</label>
+            <input type="text" id="breed">
+        </div>
+        <div class="field">
+            <label for="color">毛色:</label>
+            <input type="text" id="color">
+        </div>
+        <div class="field">
+            <label for="age">年齡:</label>
+            <input type="number" id="age">
+        </div>
+        <div class="field">
+            <label for="id_number">晶片號碼:</label>
+            <input type="text" id="id_number">
+        </div>
+        <div class="field">
+            <label for="birthday">出生日期:</label>
+            <input type="date" id="birthday">
+        </div>
+        <div class="field">
+            <label for="weight">體重:</label>
+            <input type="number" id="weight">
+        </div>
+        <div class="field">
+            <label for="temperature">體溫:</label>
+            <input type="number" id="temperature">
+        </div>
+        <div class="field">
+            <label for="operation_date">手術日期:</label>
+            <input type="date" id="operation_date">
+        </div>
+        <div class="field">
+            <label for="operation_notes">手術記錄:</label>
+            <textarea id="operation_notes"></textarea>
+        </div>
+        <div class="field">
+            <label for="medication_date">生物藥品使用紀錄日期:</label>
+            <input type="date" id="medication_date">
+        </div>
+        <div class="field">
+            <label for="medication_type">生物藥品使用紀錄型別:</label>
+            <input type="text" id="medication_type">
+        </div>
+        <div class="field">
+            <label for="medication_batch">生物藥品使用紀錄批號:</label>
+            <input type="text" id="medication_batch">
+        </div>
+        <div class="field">
+            <label for="reaction_date">疫苗藥品反應記錄日期:</label>
+            <input type="date" id="reaction_date">
+        </div>
+        <div class="field">
+            <label for="reaction_result">疫苗藥品反應記錄結果:</label>
+            <input type="text" id="reaction_result">
+        </div>
+        <div class="field">
+            <label for="reaction_medication">疫苗藥品反應記錄使用藥物:</label>
+            <input type="text" id="reaction_medication">
+        </div>
+        <div class="field">
+            <label for="other_notes">其他注意事項:</label>
+            <textarea id="other_notes"></textarea>
+        </div>
+        <div class="checkbox-group">
+            <label>投藥:</label>
+            <div>
+                <input type="checkbox" id="syrup" name="medication_form" value="syrup">
+                <label for="syrup">syrup</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tablet" name="medication_form" value="tablet">
+                <label for="tablet">tablet</label>
+            </div>
+            <div>
+                <input type="checkbox" id="powder" name="medication_form" value="powder">
+                <label for="powder">powder</label>
+            </div>
+        </div>
+        <div class="radio-group">
+            <label>個性:</label>
+            <div>
+                <input type="radio" id="gentle" name="personality" value="gentle">
+                <label for="gentle">gentle</label>
+            </div>
+            <div>
+                <input type="radio" id="nervous" name="personality" value="nervous">
+                <label for="nervous">nervous</label>
+            </div>
+            <div>
+                <input type="radio" id="danger" name="personality" value="danger">
+                <label for="danger">danger</label>
+            </div>
+        </div>
+        <div class="field">
+            <label for="test_item">檢查項目:</label>
+            <input type="text" id="test_item">
+        </div>
+        <div class="field">
+            <label for="test_result">檢查結果:</label>
+            <input type="text" id="test_result">
+        </div>
+        <div class="field">
+            <label for="test_date">日期:</label>
+            <input type="date" id="test_date">
+        </div>
+        <div class="field">
+            <label for="test_notes">紀錄:</label>
+            <textarea id="test_notes"></textarea>
+        </div>
     </div>
 </body>
 </html>
