@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>寵物歷史病歷表</title>
+    <title>美觀表單</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,6 +24,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
+        }
+        .title {
+            grid-column: span 2;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
         }
         .field {
             display: flex;
@@ -57,9 +65,150 @@
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">寵物病歷表</h1>
     <div class="container">
-        <!-- 其他表單內容 -->
+        <div class="title">寵物歷史病歷表</div>
+        <div class="field">
+            <label for="number">編號:</label>
+            <input type="text" id="number">
+        </div>
+        <div class="field">
+            <label for="date">紀錄日期:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="field">
+            <label for="owner">寵主姓名:</label>
+            <input type="text" id="owner">
+        </div>
+        <div class="field">
+            <label for="pet_name">動物醫院病歷號:</label>
+            <input type="text" id="pet_name">
+        </div>
+        <div class="field">
+            <label for="id">身份證號:</label>
+            <input type="text" id="id">
+        </div>
+        <div class="field">
+            <label for="phone">電話號碼:</label>
+            <input type="tel" id="phone">
+        </div>
+        <div class="field">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email">
+        </div>
+        <div class="field">
+            <label for="address">住址:</label>
+            <input type="text" id="address">
+        </div>
+        <div class="field">
+            <label for="breed">品種:</label>
+            <input type="text" id="breed">
+        </div>
+        <div class="field">
+            <label for="color">毛色:</label>
+            <input type="text" id="color">
+        </div>
+        <div class="field">
+            <label for="age">年齡:</label>
+            <input type="number" id="age">
+        </div>
+        <div class="field">
+            <label for="id_number">晶片號碼:</label>
+            <input type="text" id="id_number">
+        </div>
+        <div class="field">
+            <label for="birthday">出生日期:</label>
+            <input type="date" id="birthday">
+        </div>
+        <div class="field">
+            <label for="weight">體重:</label>
+            <input type="number" id="weight">
+        </div>
+        <div class="field">
+            <label for="temperature">體溫:</label>
+            <input type="number" id="temperature">
+        </div>
+        <div class="field">
+            <label for="operation_date">手術日期:</label>
+            <input type="date" id="operation_date">
+        </div>
+        <div class="field">
+            <label for="operation_notes">手術記錄:</label>
+            <textarea id="operation_notes"></textarea>
+        </div>
+        <div class="field">
+            <label for="medication_date">生物藥品使用紀錄日期:</label>
+            <input type="date" id="medication_date">
+        </div>
+        <div class="field">
+            <label for="medication_type">生物藥品使用紀錄型別:</label>
+            <input type="text" id="medication_type">
+        </div>
+        <div class="field">
+            <label for="medication_batch">生物藥品使用紀錄批號:</label>
+            <input type="text" id="medication_batch">
+        </div>
+        <div class="field">
+            <label for="reaction_date">疫苗藥品反應記錄日期:</label>
+            <input type="date" id="reaction_date">
+        </div>
+        <div class="field">
+            <label for="reaction_result">疫苗藥品反應記錄結果:</label>
+            <input type="text" id="reaction_result">
+        </div>
+        <div class="field">
+            <label for="reaction_medication">疫苗藥品反應記錄使用藥物:</label>
+            <input type="text" id="reaction_medication">
+        </div>
+        <div class="field">
+            <label for="other_notes">其他注意事項:</label>
+            <textarea id="other_notes"></textarea>
+        </div>
+        <div class="checkbox-group">
+            <label>投藥:</label>
+            <div>
+                <input type="checkbox" id="syrup" name="medication_form" value="syrup">
+                <label for="syrup">syrup</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tablet" name="medication_form" value="tablet">
+                <label for="tablet">tablet</label>
+            </div>
+            <div>
+                <input type="checkbox" id="powder" name="medication_form" value="powder">
+                <label for="powder">powder</label>
+            </div>
+        </div>
+        <div class="radio-group">
+            <label>個性:</label>
+            <div>
+                <input type="radio" id="gentle" name="personality" value="gentle">
+                <label for="gentle">gentle</label>
+            </div>
+            <div>
+                <input type="radio" id="nervous" name="personality" value="nervous">
+                <label for="nervous">nervous</label>
+            </div>
+            <div>
+                <input type="radio" id="danger" name="personality" value="danger">
+                <label for="danger">danger</label>
+            </div>
+        </div>
+        <div class="field">
+            <label for="test_item">檢查項目:</label>
+            <input type="text" id="test_item">
+        </div>
+        <div class="field">
+            <label for="test_result">檢查結果:</label>
+            <input type="text" id="test_result">
+        </div>
+        <div class="field">
+            <label for="test_date">日期:</label>
+            <input type="date" id="test_date">
+        </div>
+        <div class="field">
+            <label for="test_notes">紀錄:</label>
+            <textarea id="test_notes"></textarea>
+        </div>
     </div>
 </body>
 </html>
