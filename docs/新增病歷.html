@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Medical History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Light beige background */
+            margin: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .date-input {
+            width: 100%;
+        }
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>寵物歷史病歷表</h1>
+        <table>
+            <tr>
+                <th colspan="2">編號: <input type="text"></th>
+                <th colspan="2">填寫日期: <input type="date" class="date-input"></th>
+            </tr>
+            <tr>
+                <td>寵主姓名</td>
+                <td><input type="text"></td>
+                <td>寵物姓名</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>住址</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>畜種</td>
+                <td><input type="text"></td>
+                <td>品種</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>性別</td>
+                <td>
+                    <input type="radio" name="gender" value="M"> 公
+                    <input type="radio" name="gender" value="F"> 母
+                </td>
+                <td>晶片號碼</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>出生日期</td>
+                <td><input type="date" class="date-input"></td>
+                <td>體重</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>身高</td>
+                <td><input type="text"></td>
+                <td>體溫</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>生物藥品使用記錄</td>
+                <td colspan="3">
+                    <table>
+                        <tr>
+                            <th>日期</th>
+                            <th>型別</th>
+                            <th>批號</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date" class="date-input"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>外科手術記錄</td>
+                <td colspan="3">
+                    <table>
+                        <tr>
+                            <th>日期</th>
+                            <th>手術項目</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date" class="date-input"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>疫苗接種記錄</td>
+                <td colspan="3">
+                    <table>
+                        <tr>
+                            <th>日期</th>
+                            <th>疫苗種類</th>
+                            <th>使用藥物</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date" class="date-input"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>其他注意事項</td>
+                <td colspan="3">
+                    <table>
+                        <tr>
+                            <td>投藥:</td>
+                            <td><input type="checkbox"> syrup <input type="checkbox"> tablet <input type="checkbox"> powder</td>
+                        </tr>
+                        <tr>
+                            <td>個性:</td>
+                            <td><input type="checkbox"> gentle <input type="checkbox"> nervous <input type="checkbox"> danger</td>
+                        </tr>
+                        <tr>
+                            <td>過敏:</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>檢查項目</td>
+                <td colspan="3">
+                    <table>
+                        <tr>
+                            <th>項目</th>
+                            <th>檢查結果</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>病況</td>
+                <td><input type="text"></td>
+                <td>處置</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
