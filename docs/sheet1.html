@@ -55,7 +55,7 @@
         let data = []; // 數據將從CSV中獲取
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('sheet1.csv')
+            fetch('sheet1_cleaned.csv')
                 .then(response => response.text())
                 .then(text => {
                     const rows = text.split('\\n');
@@ -93,7 +93,7 @@
             tableBody.innerHTML = '';
 
             data.forEach(row => {
-                const date = new Date(row[0]);
+                const date = new Date(row[0]); // 假設日期在第一列
                 if (date >= startDate && date <= endDate) {
                     let rowHtml = '<tr>';
                     row.forEach(cell => {
