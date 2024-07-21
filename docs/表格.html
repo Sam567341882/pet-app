@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格1資料</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .filter {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>表格1資料</h1>
+        <div class="filter">
+            <label for="startDate">開始日期:</label>
+            <input type="date" id="startDate">
+            <label for="endDate">結束日期:</label>
+            <input type="date" id="endDate">
+            <button onclick="filterData()">篩選</button>
+        </div>
+        <table id="dataTable">
+            <thead>
+                <!-- 表格標題將在此插入 -->
+            </thead>
+            <tbody>
+                <!-- 表格數據將在此插入 -->
+            </tbody>
+        </table>
+        <div>
+            <a href="sheet2.html">前往表格2</a>
+        </div>
+    </div>
+    <script>
+        let data = []; // 數據將從CSV中獲取
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('sheet1.csv')
+                .then(response => response.text())
+                .then(text => {
+                    const rows = text.split('\\n');
+                    const headers = rows[0].split(',');
+                    const tableHead = document.querySelector('#dataTable thead');
+                    const tableBody = document.querySelector('#dataTable tbody');
+
+                    // 填充表格標題
+                    let headerHtml = '<tr>';
+                    headers.forEach(header => {
+                        headerHtml += `<th>${header}</th>`;
+                    });
+                    headerHtml += '</tr>';
+                    tableHead.innerHTML = headerHtml;
+
+                    // 填充表格數據
+                    for (let i = 1; i < rows.length; i++) {
+                        if (rows[i].trim() === '') continue;
+                        const cells = rows[i].split(',');
+                        let rowHtml = '<tr>';
+                        cells.forEach(cell => {
+                            rowHtml += `<td>${cell}</td>`;
+                        });
+                        rowHtml += '</tr>';
+                        tableBody.innerHTML += rowHtml;
+                        data.push(cells);
+                    }
+                });
+        });
+
+        function filterData() {
+            const startDate = new Date(document.getElementById('startDate').value);
+            const endDate = new Date(document.getElementById('endDate').value);
+            const tableBody = document.querySelector('#dataTable tbody');
+            tableBody.innerHTML = '';
+
+            data.forEach(row => {
+                const date = new Date(row[0]);
+                if (date >= startDate && date <= endDate) {
+                    let rowHtml = '<tr>';
+                    row.forEach(cell => {
+                        rowHtml += `<td>${cell}</td>`;
+                    });
+                    rowHtml += '</tr>';
+                    tableBody.innerHTML += rowHtml;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
