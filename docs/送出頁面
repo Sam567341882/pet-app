@@ -46,7 +46,7 @@
         <h1>提交成功!</h1>
         <p>您的資料已成功提交。</p>
         <div class="button-container">
-            <button onclick="window.location.href='main.html'">回主畫面</button>
+            <button onclick="window.location.href='index.html'">回主畫面</button>
         </div>
     </div>
 </body>
