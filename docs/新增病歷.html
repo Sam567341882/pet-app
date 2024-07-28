@@ -41,6 +41,22 @@
             width: 100%;
             box-sizing: border-box;
         }
+        .submit-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .submit-btn button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -132,15 +148,14 @@
                 <td>計畫</td>
                 <td colspan="3"><textarea rows="4"></textarea></td>
             </tr>
-          
             <tr>
                 <td>其他注意事項</td>
                 <td colspan="3"><textarea rows="4"></textarea></td>
             </tr>
-                    </table>
-                </td>
-            </tr>
         </table>
+        <div class="submit-btn">
+            <button type="button">送出</button>
+        </div>
     </div>
 </body>
 </html>
