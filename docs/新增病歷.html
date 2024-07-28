@@ -19,9 +19,17 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            text-align: center;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .button-container {
+            text-align: center;
         }
         table {
             width: 100%;
@@ -41,27 +49,11 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .top-btn {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .top-btn button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .top-btn button:hover {
-            background-color: #45a049;
-        }
         .submit-btn {
             text-align: center;
             margin-top: 20px;
         }
-        .submit-btn button {
+        .submit-btn button, .button-container button {
             padding: 10px 20px;
             font-size: 16px;
             background-color: #4CAF50;
@@ -71,17 +63,19 @@
             cursor: pointer;
             margin: 0 10px;
         }
-        .submit-btn button:hover {
+        .submit-btn button:hover, .button-container button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="top-btn">
-            <button type="button" onclick="window.location.href='藥品紀錄.html'">藥品紀錄</button>
+        <div class="header">
+            <h1>寵物歷史病歷表</h1>
+            <div class="button-container">
+                <button type="button" onclick="window.location.href='藥品紀錄.html'">藥品紀錄</button>
+            </div>
         </div>
-        <h1>寵物歷史病歷表</h1>
         <table>
             <tr>
                 <th colspan="2">編號: <input type="text"></th>
