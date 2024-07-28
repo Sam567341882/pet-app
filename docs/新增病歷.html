@@ -37,7 +37,7 @@
         .date-input {
             width: 100%;
         }
-        input[type="text"] {
+        input[type="text"], textarea {
             width: 100%;
             box-sizing: border-box;
         }
@@ -50,6 +50,12 @@
             <tr>
                 <th colspan="2">編號: <input type="text"></th>
                 <th colspan="2">填寫日期: <input type="date" class="date-input"></th>
+            </tr>
+            <tr>
+                <td>主治醫師</td>
+                <td><input type="text"></td>
+                <td>看診科別</td>
+                <td><input type="text"></td>
             </tr>
             <tr>
                 <td>寵主姓名</td>
@@ -89,17 +95,37 @@
                 <td><input type="text"></td>
             </tr>
             <tr>
-                <td>生物藥品使用記錄</td>
+                <td>呼吸</td>
+                <td><input type="text"></td>
+                <td>脈搏</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>血壓</td>
+                <td><input type="text"></td>
+                <td>MAP</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>測量備註</td>
+                <td colspan="3"><textarea rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td>病況</td>
+                <td><input type="text"></td>
+                <td>投藥狀況</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>疾病史跟症狀描述</td>
                 <td colspan="3">
                     <table>
                         <tr>
                             <th>日期</th>
-                            <th>型別</th>
-                            <th>批號</th>
+                            <th>描述</th>
                         </tr>
                         <tr>
                             <td><input type="date" class="date-input"></td>
-                            <td><input type="text"></td>
                             <td><input type="text"></td>
                         </tr>
                     </table>
@@ -138,23 +164,12 @@
                 </td>
             </tr>
             <tr>
+                <td>備註</td>
+                <td colspan="3"><textarea rows="4"></textarea></td>
+            </tr>
+            <tr>
                 <td>其他注意事項</td>
-                <td colspan="3">
-                    <table>
-                        <tr>
-                            <td>投藥:</td>
-                            <td><input type="checkbox"> syrup <input type="checkbox"> tablet <input type="checkbox"> powder</td>
-                        </tr>
-                        <tr>
-                            <td>個性:</td>
-                            <td><input type="checkbox"> gentle <input type="checkbox"> nervous <input type="checkbox"> danger</td>
-                        </tr>
-                        <tr>
-                            <td>過敏:</td>
-                            <td><input type="text"></td>
-                        </tr>
-                    </table>
-                </td>
+                <td colspan="3"><textarea rows="4"></textarea></td>
             </tr>
             <tr>
                 <td>檢查項目</td>
@@ -170,12 +185,6 @@
                         </tr>
                     </table>
                 </td>
-            </tr>
-            <tr>
-                <td>病況</td>
-                <td><input type="text"></td>
-                <td>處置</td>
-                <td><input type="text"></td>
             </tr>
         </table>
     </div>
