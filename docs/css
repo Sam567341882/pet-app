@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寵物病歷系統</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #85C1E9;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            border-radius: 30px;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .btn-pet {
+            background-color: #FFC300;
+            color: #fff;
+            border: none;
+        }
+        .btn-member {
+            background-color: #FF5733;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">寵物病歷系統</div>
+        <div class="subtitle">會員: MISS HUANG</div>
+        <p>請選擇功能</p>
+        <button class="btn btn-custom btn-pet" onclick="selectPet()">選擇寵物</button>
+        <button class="btn btn-custom btn-member" onclick="viewMember()">會員資料</button>
+    </div>
+
+    <script>
+        function selectPet() {
+            alert("選擇寵物功能尚未實作！");
+        }
+
+        function viewMember() {
+            alert("會員資料功能尚未實作！");
+        }
+    </script>
+</body>
+</html>
